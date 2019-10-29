@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 
 const app = express();
 
+const { environment } = require('./config')
+
 // server plugins & default middlewares
 app
   .use(bodyParser.json())
@@ -26,5 +28,5 @@ app.get('/*', (req, res) => {
 
 app.listen(5400, () => {
   // eslint-disable-next-line no-console
-  console.log('app is running on port 5400');
+  console.log(`app[${environment}] is running on port 5400`);
 });
