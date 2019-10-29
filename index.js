@@ -1,6 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const app = express();
+
+// server plugins & default middlewares
+app
+  .use(bodyParser.json())
+  .use(bodyParser.urlencoded({
+    extended: true
+  }))
 
 const apiRoutes = require('./routes/');
 
