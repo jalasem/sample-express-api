@@ -8,6 +8,8 @@ let users = [
   { name: 'Isabella', email: 'isabella@mail.com' },
 ];
 
+// const db = require('../model/db-pool');
+
 users = users.map((user, index) => ({ ...user, id: index + 11 }));
 
 module.exports = {
