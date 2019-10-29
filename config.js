@@ -8,6 +8,6 @@ module.exports = {
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
-    uri: process.env.DB_URI,
+    uri: process.env.DATABASE_URL,
   },
 };
